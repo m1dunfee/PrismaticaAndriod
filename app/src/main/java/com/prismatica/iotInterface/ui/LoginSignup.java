@@ -8,7 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.prismatica.iotInterface.R;
 import com.prismatica.iotInterface.data.UserRepository;
 

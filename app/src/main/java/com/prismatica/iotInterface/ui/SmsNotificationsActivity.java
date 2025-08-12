@@ -1,5 +1,4 @@
-package com.prismatica.iotInterface.ui
-        ;
+package com.prismatica.iotInterface.ui;
 
 import android.Manifest;
 import android.content.pm.PackageManager;

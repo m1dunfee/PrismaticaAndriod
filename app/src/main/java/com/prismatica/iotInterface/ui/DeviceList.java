@@ -13,7 +13,6 @@ import com.prismatica.iotInterface.R;
 import com.prismatica.iotInterface.data.Item;
 import com.prismatica.iotInterface.data.ItemRepository;
 import com.prismatica.iotInterface.util.DeviceAdapter;
-
 import java.util.List;
 
 public class DeviceList extends AppCompatActivity implements DeviceAdapter.Listener {
