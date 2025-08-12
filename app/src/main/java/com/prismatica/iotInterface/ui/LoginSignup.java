@@ -1,25 +1,21 @@
 package com.prismatica.iotInterface.ui;
 
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.prismatica.iotInterface.R;
 import com.prismatica.iotInterface.data.UserRepository;
 
 public class LoginSignup extends AppCompatActivity {
-
-    // Variables
     private EditText etUsername;
     private EditText etPassword;
-    private Button btnLogin;
+    private Button btnSubmit;
     private Button btnToggleMode;
     private TextView tvMode;
     private boolean signupMode;
@@ -28,14 +24,15 @@ public class LoginSignup extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        users = new UserRepository(this);
+        setContentView(R.layout.activity_login_signup);
 
+        users = new UserRepository(this);
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
-        btnLogin = findViewById(R.id.btnLogin);
+        btnSubmit = findViewById(R.id.btnSubmit);
         btnToggleMode = findViewById(R.id.btnToggleMode);
         tvMode = findViewById(R.id.tvMode);
+
         signupMode = false;
         updateModeLabel();
 
@@ -44,12 +41,12 @@ public class LoginSignup extends AppCompatActivity {
             updateModeLabel();
         });
 
-        btnLogin.setOnClickListener(v -> onSubmit());
+        btnSubmit.setOnClickListener(v -> onSubmit());
     }
 
     private void updateModeLabel() {
         tvMode.setText(signupMode ? "Sign Up" : "Log In");
-        btnLogin.setText(signupMode ? "Create Account" : "Log In");
+        btnSubmit.setText(signupMode ? "Create Account" : "Log In");
         btnToggleMode.setText(signupMode ? "Switch to Log In" : "Switch to Sign Up");
     }
 
@@ -60,11 +57,12 @@ public class LoginSignup extends AppCompatActivity {
             Toast.makeText(this, "Enter username and password", Toast.LENGTH_SHORT).show();
             return;
         }
+
         boolean ok;
         if (signupMode) {
             ok = users.createUser(u, p);
             if (!ok) {
-                Toast.makeText(this, "User already exists or invalid", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "User exists or invalid", Toast.LENGTH_SHORT).show();
                 return;
             }
             Toast.makeText(this, "Account created", Toast.LENGTH_SHORT).show();
@@ -75,7 +73,8 @@ public class LoginSignup extends AppCompatActivity {
                 return;
             }
         }
-        Intent i = new Intent(this, HomeActivity.class);
+
+        Intent i = new Intent(this, DeviceList.class);
         i.putExtra("username", u);
         startActivity(i);
         finish();
