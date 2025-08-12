@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- B) Permissions you might request at runtime -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,30 +17,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.IotInterface">
+
         <activity
-            android:name=".SmsNotificationsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DeviceData"
-            android:exported="false" />
-        <activity
-            android:name=".DeviceList"
-            android:exported="false" />
-        <activity
-            android:name=".Device"
-            android:exported="false" />
-        <activity
-            android:name=".UserManagementActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginSignup"
+            android:name=".ui.LoginSignup"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.SmsNotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DeviceData"
+            android:exported="false" />
+        <activity
+            android:name=".ui.DeviceList"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Device"
+            android:exported="false" />
+        <activity
+            android:name=".ui.UserManagementActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
