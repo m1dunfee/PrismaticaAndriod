@@ -37,4 +37,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@android:drawable/ic_input_add" />
+
+<!--    FIXME: added the botton for SMS Test-->
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

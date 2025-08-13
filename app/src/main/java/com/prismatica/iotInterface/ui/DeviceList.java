@@ -3,7 +3,7 @@ package com.prismatica.iotInterface.ui;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
+//import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -26,19 +26,20 @@ public class DeviceList extends AppCompatActivity implements DeviceAdapter.Liste
 
         repo = new ItemRepository(this);
 
-        RecyclerView rv = findViewById(R.id.rvItems);
+        RecyclerView rv = findViewById(R.id.device_list_recycler);
         rv.setLayoutManager(new GridLayoutManager(this, 2));
         adapter = new DeviceAdapter(repo.readAll(), this);
         rv.setAdapter(adapter);
 
-        FloatingActionButton fab = findViewById(R.id.fabAdd);
+        FloatingActionButton fab = findViewById(R.id.fab_add_device);
         fab.setOnClickListener(v -> showCreateDialog());
 
-        View btnSms = findViewById(R.id.btnSmsTest);
-        if (btnSms != null) {
-            btnSms.setOnClickListener(v -> Toast.makeText(this, "Open SmsNotificationsActivity", Toast.LENGTH_SHORT).show());
-            // startActivity(new Intent(this, SmsNotificationsActivity.class));
-        }
+//        FIXME: added the botton to the View and uncomment import
+//        View btnSms = findViewById(R.id.btnSmsTest);
+//        if (btnSms != null) {
+//            btnSms.setOnClickListener(v -> Toast.makeText(this, "Open SmsNotificationsActivity", Toast.LENGTH_SHORT).show());
+//            // startActivity(new Intent(this, SmsNotificationsActivity.class));
+//        }
     }
 
     private void refresh() {

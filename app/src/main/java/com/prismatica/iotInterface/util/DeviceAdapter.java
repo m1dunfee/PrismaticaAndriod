@@ -7,7 +7,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.prismatica.iotInterface.R;
 import com.prismatica.iotInterface.data.Item;
 import java.util.List;

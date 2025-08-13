@@ -22,8 +22,8 @@ public class SmsNotificationsActivity extends AppCompatActivity {
         super.onCreate(b);
         setContentView(R.layout.activity_sms_notifications);
 
-        Button btnRequest = findViewById(R.id.btnRequestSms);
-        Button btnSend = findViewById(R.id.btnSendSms);
+        Button btnRequest = findViewById(R.id.btnRequestPermission);
+        Button btnSend = findViewById(R.id.btnSendTest);
 
         smsPermLauncher = registerForActivityResult(
                 new ActivityResultContracts.RequestPermission(),
