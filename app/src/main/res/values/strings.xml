@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">iotInterface</string>
+    <string name="row_name_placeholder">Name</string>
+    <string name="row_qty_placeholder">Qty: 0</string>  <!-- Might need to make this dynamic later -->
+    <string name="cd_edit">Edit</string>
+    <string name="cd_delete">Delete</string>
+
 </resources>

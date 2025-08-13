@@ -20,7 +20,6 @@ public class SmsNotificationsActivity extends AppCompatActivity {
     private ActivityResultLauncher<String> smsPermLauncher;
     private boolean smsGranted;
 
-    // NEW: bind your status views
     private TextView tvPermissionStatus, tvFeedback;
     private Button btnSend;
     private CheckBox cbLowInventory;
