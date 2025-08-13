@@ -1,8 +1,10 @@
 package com.prismatica.iotInterface.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 //import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,12 +36,11 @@ public class DeviceList extends AppCompatActivity implements DeviceAdapter.Liste
         FloatingActionButton fab = findViewById(R.id.fab_add_device);
         fab.setOnClickListener(v -> showCreateDialog());
 
-//        FIXME: added the botton to the View and uncomment import
-//        View btnSms = findViewById(R.id.btnSmsTest);
-//        if (btnSms != null) {
-//            btnSms.setOnClickListener(v -> Toast.makeText(this, "Open SmsNotificationsActivity", Toast.LENGTH_SHORT).show());
-//            // startActivity(new Intent(this, SmsNotificationsActivity.class));
-//        }
+        TextView header = findViewById(R.id.tvDeviceListHeader);
+        if (header != null) {
+            header.setOnClickListener(v ->
+                    startActivity(new Intent(this, SmsNotificationsActivity.class)));
+        }
     }
 
     private void refresh() {
