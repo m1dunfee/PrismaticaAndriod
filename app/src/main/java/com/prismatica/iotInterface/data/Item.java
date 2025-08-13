@@ -10,5 +10,6 @@ public class Item {
         this.id = id;
         this.name = name;
         this.qty = qty;
+        this.notes = notes;
     }
 }
