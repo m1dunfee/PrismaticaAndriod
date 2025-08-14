@@ -1,8 +1,24 @@
 <resources>
+<!--    app     -->
     <string name="app_name">iotInterface</string>
+<!--    item_row    -->
     <string name="row_name_placeholder">Name</string>
     <string name="row_qty_placeholder">Qty: 0</string>  <!-- Might need to make this dynamic later -->
     <string name="cd_edit">Edit</string>
     <string name="cd_delete">Delete</string>
-
+<!--    activity_sms_notification     -->
+    <string name="tv_sms_notification">SMS Notifications</string>
+    <string name="tv_request_sms_permission">Checking SMS permission...</string>
+    <string name="btn_enable_sms_notifications">Enable SMS Notifications</string>
+    <string name="tv_notify_when">Notify me when...</string>
+    <string name="cb_low_inventory">Low inventory</string>
+    <string name="btn_send_sms">Send Test SMS</string>
+<!--    device_list     -->
+    <string name="tv_devices">Devices</string>
+<!--    login/signup    -->
+    <string name="tv_login">Log In</string>
+    <string name="et_username">Username</string>
+    <string name="et_password">Password</string>
+    <string name="btn_login">Log In</string>
+    <string name="btn_switch_to_signup">Switch to Sign Up</string>
 </resources>

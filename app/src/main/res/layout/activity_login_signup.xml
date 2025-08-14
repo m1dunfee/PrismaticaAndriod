@@ -10,7 +10,7 @@
         android:id="@+id/tvMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log In"
+        android:text="@string/tv_login"
         android:textSize="20sp"
         android:paddingBottom="8dp" />
 
@@ -18,24 +18,24 @@
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:hint="@string/et_username" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:hint="@string/et_password"
         android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log In" />
+        android:text="@string/btn_login" />
 
     <Button
         android:id="@+id/btnToggleMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Switch to Sign Up" />
+        android:text="@string/btn_switch_to_signup" />
 </LinearLayout>
